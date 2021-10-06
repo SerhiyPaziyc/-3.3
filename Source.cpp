@@ -1,1 +1,41 @@
-// Lab_03_3.cpp// < прізвище, ім’я автора >// Лабораторна робота № 3.3// Розгалуження, задане графіком функції.// Варіант 0.1#include <iostream>#include <cmath>using namespace std;int main(){	double x; // вхідний аргумент    double R; // вхідний параметр	double y; // результат обчислення виразу	cout << "R = "; cin >> R;	cout << "x = "; cin >> x;	// розгалуження в повній формі	if (x <= -2 * R)		y = R;	else		if (-2 * R < x && x <= 0)			y = -1. / 2. * x;		else			if (0 < x && x <= R)				y = R - sqrt(R * R - x * x);			else				if (R < x && x <= 2 * R)					y = sqrt(R * R - (x - R) * (x - R));				else					y = -(x - 2 * R) / (6 - 2 * R);	cout << endl;	cout << "y = " << y << endl;	cin.get();	return 0;}
+// Lab_03_3.cpp
+// Пазюк Сергій
+// Лабораторна робота № 3.3
+// Розгалуження, задане формулою: функція з параметрами.
+// Варіант 9
+    #include <iostream>
+    #include <cmath>
+
+    using namespace std;
+
+    int main()
+    {
+    double x;
+    double y;
+
+    cout << "x = "; cin >> x;
+
+    if (x < -7) {
+        y = 0;
+    }
+    else if (x >= -7 && x <= -3) {
+        y = x + 7;
+    }
+    else if (x > -3 && x < -2) {
+        y = 4;
+    }
+    else if (x >= -2 && x <= 2) {
+        y = x * x;
+    }
+    else if (x > 2 && x < 4) {
+        y = 2 * x - 4;
+    }
+    else {
+        y = 0;
+    }
+
+    cout << "y = " << y;
+
+    return 0;
+    }
+
